@@ -70,3 +70,21 @@ class Solution {
         }
 }
 ```
+
+### Approach
+
+- Start with `numBottles` bottles and drink them all.
+- Keep a count `emptyBottles` for empty bottles.
+- While you have enough empties for the current exchange rate:
+  - Subtract `numExchange` empties.
+  - Increment `numExchange` (next exchange harder).
+  - Increment `bottleDrunk` (you got a new bottle to drink).
+  - Add 1 empty bottle back.
+- Stop when you cannot exchange anymore.
+
+---
+
+### Complexity
+
+- **Time Complexity:** O(bottleDrunk) (each loop iteration drinks one more bottle).
+- **Space Complexity:** O(1) (only counters).
